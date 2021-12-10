@@ -36,17 +36,17 @@ public class ConvertStudentDTO {
     }
 
     public String getGender() {
-        if(gender == true){
+        if (gender == true) {
             return "male";
-        }else{
+        } else {
             return "female";
         }
     }
 
     public void setGender(String gender) {
-        if(gender.equals("male")){
+        if (gender.equals("male")) {
             this.gender = true;
-        }else {
+        } else {
             this.gender = false;
         }
     }
@@ -58,30 +58,32 @@ public class ConvertStudentDTO {
     public void setAge(int age) {
         this.age = age;
     }
-    public void showStudent(){
+
+    public void showStudent() {
         System.out.println("ID: " + id +
                 "\nName: " + name +
                 "\nGender: " + getGender() +
                 "\nAge: " + age);
     }
-    private static Set<ConvertStudentDTO> DemoConvertStudentDTO(){
+
+    private static Set<ConvertStudentDTO> DemoConvertStudentDTO() {
         final Set<Student> studentList = new HashSet<>();
-        studentList.add(new Student(1,"Nguyễn Văn A","male", 25));
-        studentList.add(new Student(2,"Hoàng Văn B","male", 18));
-        studentList.add(new Student(3,"Lý Văn C","male", 21));
-        studentList.add(new Student(4,"Đinh Ngọc D","male", 16));
-        studentList.add(new Student(5,"Nguyễn Văn E","male", 17));
-        studentList.add(new Student(6,"Nguyễn Văn F","male", 23));
-        studentList.add(new Student(7,"Nguyễn Văn G","male", 20));
-        studentList.add(new Student(8,"Phạm Thị H","female", 56));
-        studentList.add(new Student(9,"Nguyễn Văn I","male", 22));
-        studentList.add(new Student(10,"Nguyễn Thị J","female", 19));
+        studentList.add(new Student(1, "Nguyễn Văn A", "male", 25));
+        studentList.add(new Student(2, "Hoàng Văn B", "male", 18));
+        studentList.add(new Student(3, "Lý Văn C", "male", 21));
+        studentList.add(new Student(4, "Đinh Ngọc D", "male", 16));
+        studentList.add(new Student(5, "Nguyễn Văn E", "male", 17));
+        studentList.add(new Student(6, "Nguyễn Văn F", "male", 23));
+        studentList.add(new Student(7, "Nguyễn Văn G", "male", 20));
+        studentList.add(new Student(8, "Phạm Thị H", "female", 56));
+        studentList.add(new Student(9, "Nguyễn Văn I", "male", 22));
+        studentList.add(new Student(10, "Nguyễn Thị J", "female", 19));
         final Set<ConvertStudentDTO> convertStudentDTOList = new HashSet<>();
-        for(Student student : studentList){
-            convertStudentDTOList.add(new ConvertStudentDTO(student.getId(),student.getName(),student.getGender(),student.getAge()));
+        for (Student student : studentList) {
+            convertStudentDTOList.add(new ConvertStudentDTO(student.getId(), student.getName(), student.getGender(), student.getAge()));
         }
 
-        for(ConvertStudentDTO convertStudentDTO : convertStudentDTOList){
+        for (ConvertStudentDTO convertStudentDTO : convertStudentDTOList) {
             convertStudentDTO.showStudent();
         }
         return convertStudentDTOList;

@@ -13,6 +13,8 @@ public class Demo {
         numbers.add(6);
         numbers.add(7);
         numbers.add(8);
-        numbers.forEach( (n) -> { System.out.println(n); } ); //loop is executed without name
+        numbers.forEach((n) -> {
+            System.out.println(n);
+        }); //loop is executed without name
     }
 }

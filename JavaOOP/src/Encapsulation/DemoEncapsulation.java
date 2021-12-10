@@ -10,6 +10,6 @@ public class DemoEncapsulation {
         acc.setEmail(" khanhhq@itsj-group.com.vn");
         acc.setAmount(3000000f);
         //getting values through getter methods
-        System.out.println(acc.getAcc_no()+" "+acc.getName()+" "+acc.getEmail()+" "+acc.getAmount());
+        System.out.println(acc.getAcc_no() + " " + acc.getName() + " " + acc.getEmail() + " " + acc.getAmount());
     }
 }
